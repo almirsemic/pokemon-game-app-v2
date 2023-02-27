@@ -4,3 +4,84 @@
   min-height: 100vh;
   overflow: hidden;
 }
+
+.rocket {
+  width: 69%;
+  height: auto;
+}
+
+.left_pokemon {
+  animation: slideInFromLeft 1s ease-in-out;
+}
+
+.right_pokemon {
+  animation: slideInFromRight 1s ease-in-out;
+}
+
+@keyframes slideInFromLeft {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideInFromRight {
+  0% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.pokemon_one_fight {
+  width: 50%;
+  height: auto;
+  animation: fallAndBreak 1.5s linear 1.5s forwards, moveUpDown 1.5s ease-in-out infinite alternate 3s forwards;
+  opacity: 0;
+}
+
+.pokemon_two_fight {
+  width: 50%;
+  height: auto;
+  animation: fallAndBreak 1.5s linear 3s forwards, moveUpDown 1.8s ease-in-out infinite alternate 4.5s forwards;
+  opacity: 0;
+}
+
+@keyframes fallAndBreak {
+  0% {
+    transform: translateY(-150%);
+    opacity: 0.6;
+  }
+  100% {
+    transform: translateY(0%);
+    opacity: 1;
+  }
+}
+
+@keyframes moveUpDown {
+  0% {
+    transform: translateY(0%);
+  }
+  50% {
+    transform: translateY(-10%);
+  }
+  100% {
+    transform: translateY(0%);
+  }
+}
+.content{
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #003566;
+  transition: transform 1s ease;
+  z-index: 1;
+}

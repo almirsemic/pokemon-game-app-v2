@@ -5,6 +5,7 @@ import { initialStateType } from '../Types/types'
 const initialState: initialStateType = {
   pokemonOne: {
     pokemonOneNumber: 1,
+    ready: false,
     data: {
       name: '',
       front_shiny: '',
@@ -16,6 +17,7 @@ const initialState: initialStateType = {
   },
   pokemonTwo: {
     pokemonTwoNumber: 2,
+    ready: false,
     data: {
       name: '',
       front_shiny: '',
@@ -36,6 +38,7 @@ export const pokemonsSlice = createSlice({
       action: PayloadAction<initialStateType['pokemonOne']>,
     ) => {
       state.pokemonOne.pokemonOneNumber = action.payload.pokemonOneNumber
+      state.pokemonOne.ready = action.payload.ready
       if (action.payload.data) {
         state.pokemonOne.data = action.payload.data
       }
@@ -45,6 +48,7 @@ export const pokemonsSlice = createSlice({
       action: PayloadAction<initialStateType['pokemonTwo']>,
     ) => {
       state.pokemonTwo.pokemonTwoNumber = action.payload.pokemonTwoNumber
+      state.pokemonTwo.ready = action.payload.ready
       if (action.payload.data) {
         state.pokemonTwo.data = action.payload.data
       }

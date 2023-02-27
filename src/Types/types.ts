@@ -181,10 +181,12 @@ export interface PokemonData {
 export interface initialStateType {
   pokemonOne: {
     pokemonOneNumber: number
+    ready: boolean
     data?: PokemonData
   }
   pokemonTwo: {
     pokemonTwoNumber: number
+    ready: boolean
     data?: PokemonData
   }
 }
