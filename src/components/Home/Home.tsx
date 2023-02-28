@@ -70,7 +70,10 @@ const Home: React.FC = () => {
           data={memoizedPokemonOne}
         />
         <div className="col-7 col-lg-2 start_game">
-          <StartGame />
+          <StartGame
+            pokemonOne={memoizedPokemonOne?.name}
+            pokemonTwo={memoizedPokemonTwo?.name}
+          />
         </div>
         <Pokemon
           pokemon="pokemonTwo"
